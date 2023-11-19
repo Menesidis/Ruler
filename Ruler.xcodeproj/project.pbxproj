@@ -14,6 +14,7 @@
 		2F6CC1C92B0693C7001AA7F0 /* RulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CC1C82B0693C7001AA7F0 /* RulerTests.swift */; };
 		2F6CC1D32B0693C7001AA7F0 /* RulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CC1D22B0693C7001AA7F0 /* RulerUITests.swift */; };
 		2F6CC1D52B0693C7001AA7F0 /* RulerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CC1D42B0693C7001AA7F0 /* RulerUITestsLaunchTests.swift */; };
+		2F87CA662B0AB3BB00DF3C4D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2F87CA652B0AB3BB00DF3C4D /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F87CA662B0AB3BB00DF3C4D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = Ruler;
+			packageProductDependencies = (
+				2F87CA652B0AB3BB00DF3C4D /* ComposableArchitecture */,
+			);
 			productName = Ruler;
 			productReference = 2F6CC1B32B0693C6001AA7F0 /* Ruler.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 2F6CC1AA2B0693C6001AA7F0;
+			packageReferences = (
+				2F87CA642B0AB3BB00DF3C4D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 2F6CC1B42B0693C6001AA7F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -440,7 +448,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Ruler.ruler.com.Ruler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,7 +485,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Ruler.ruler.com.Ruler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -609,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F87CA642B0AB3BB00DF3C4D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 1.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F87CA652B0AB3BB00DF3C4D /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F87CA642B0AB3BB00DF3C4D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F6CC1AB2B0693C6001AA7F0 /* Project object */;
 }
