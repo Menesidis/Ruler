@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F64C3CE2B0D5E70000DA47C /* RulerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 2F64C3CD2B0D5E70000DA47C /* RulerPackage */; };
 		2F6CC1B72B0693C6001AA7F0 /* RulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CC1B62B0693C6001AA7F0 /* RulerApp.swift */; };
 		2F6CC1B92B0693C6001AA7F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CC1B82B0693C6001AA7F0 /* ContentView.swift */; };
 		2F6CC1BB2B0693C7001AA7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6CC1BA2B0693C7001AA7F0 /* Assets.xcassets */; };
@@ -46,7 +47,7 @@
 		2F6CC1CE2B0693C7001AA7F0 /* RulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6CC1D22B0693C7001AA7F0 /* RulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerUITests.swift; sourceTree = "<group>"; };
 		2F6CC1D42B0693C7001AA7F0 /* RulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2FE446132B0AB61A00A058D4 /* RulerPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RulerPackage; path = ../RulerPackage; sourceTree = "<group>"; };
+		2FDDEFCB2B0D5CA100EB948F /* RulerPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RulerPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F64C3CE2B0D5E70000DA47C /* RulerPackage in Frameworks */,
 				2F87CA662B0AB3BB00DF3C4D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,11 +80,12 @@
 		2F6CC1AA2B0693C6001AA7F0 = {
 			isa = PBXGroup;
 			children = (
-				2FE446132B0AB61A00A058D4 /* RulerPackage */,
+				2FDDEFCB2B0D5CA100EB948F /* RulerPackage */,
 				2F6CC1B52B0693C6001AA7F0 /* Ruler */,
 				2F6CC1C72B0693C7001AA7F0 /* RulerTests */,
 				2F6CC1D12B0693C7001AA7F0 /* RulerUITests */,
 				2F6CC1B42B0693C6001AA7F0 /* Products */,
+				2FE446142B0ABBF000A058D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +136,13 @@
 			path = RulerUITests;
 			sourceTree = "<group>";
 		};
+		2FE446142B0ABBF000A058D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +161,7 @@
 			name = Ruler;
 			packageProductDependencies = (
 				2F87CA652B0AB3BB00DF3C4D /* ComposableArchitecture */,
+				2F64C3CD2B0D5E70000DA47C /* RulerPackage */,
 			);
 			productName = Ruler;
 			productReference = 2F6CC1B32B0693C6001AA7F0 /* Ruler.app */;
@@ -634,6 +645,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2F64C3CD2B0D5E70000DA47C /* RulerPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RulerPackage;
+		};
 		2F87CA652B0AB3BB00DF3C4D /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2F87CA642B0AB3BB00DF3C4D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
