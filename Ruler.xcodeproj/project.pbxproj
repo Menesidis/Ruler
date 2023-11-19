@@ -46,6 +46,7 @@
 		2F6CC1CE2B0693C7001AA7F0 /* RulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6CC1D22B0693C7001AA7F0 /* RulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerUITests.swift; sourceTree = "<group>"; };
 		2F6CC1D42B0693C7001AA7F0 /* RulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2FE446132B0AB61A00A058D4 /* RulerPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RulerPackage; path = ../RulerPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		2F6CC1AA2B0693C6001AA7F0 = {
 			isa = PBXGroup;
 			children = (
+				2FE446132B0AB61A00A058D4 /* RulerPackage */,
 				2F6CC1B52B0693C6001AA7F0 /* Ruler */,
 				2F6CC1C72B0693C7001AA7F0 /* RulerTests */,
 				2F6CC1D12B0693C7001AA7F0 /* RulerUITests */,
