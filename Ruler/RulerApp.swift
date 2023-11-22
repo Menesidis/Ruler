@@ -11,7 +11,7 @@ import SwiftUI
 struct RulerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MemoryBoard()
         }
     }
 }
