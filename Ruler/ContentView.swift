@@ -1,36 +1,8 @@
 import SwiftUI
 import RulerPackage
 
-
-struct MemoryItem: Equatable, Identifiable, Hashable {
-    let id: String
-    let name: String
-    //let image: Image = Image(systemName: "star.fill")
-}
-
-extension MemoryItem {
-    static let items = 
-    [
-        [
-            MemoryItem(id: "1", name: "item1"),
-            MemoryItem(id: "2", name: "item2"),
-            MemoryItem(id: "3", name: "item3"),
-        ],
-        [
-            MemoryItem(id: "4", name: "item4"),
-            MemoryItem(id: "5", name: "item5"),
-            MemoryItem(id: "6", name: "item6"),
-        ],
-        [
-            MemoryItem(id: "7", name: "item7"),
-            MemoryItem(id: "8", name: "item8"),
-            MemoryItem(id: "9", name: "item9"),
-        ]
-    ]
-}
-
 struct MemoryBoard: View {
-    @State var items = MemoryItem.items
+    @State var items = Item.mocks
     var body: some View {
         VStack {
             Spacer()
@@ -39,7 +11,7 @@ struct MemoryBoard: View {
                     HStack {
                         Spacer()
                         HStack(spacing: Dimensions.spacing) {
-                            ForEach(item , id: \.self) { item in
+                            ForEach(item) { item in
                                 Text(item.name)
                                     .frame(width: Dimensions.itemWidth , height: Dimensions.itemHeight)
                                     .foregroundColor(Colors.customRed)
