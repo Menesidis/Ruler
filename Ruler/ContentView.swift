@@ -1,27 +1,35 @@
+import ComposableArchitecture
 import SwiftUI
 import RulerPackage
 
 struct MemoryBoard: View {
-    @State var items = Item.mocks
+    let store: StoreOf<MemoryFeature>
+    
     var body: some View {
-        VStack {
-            Spacer()
-            VStack(spacing: Dimensions.spacing) {
-                ForEach(items, id: \.self) { item in
-                    HStack {
-                        Spacer()
-                        HStack(spacing: Dimensions.spacing) {
-                            ForEach(item) { item in
-                                Text(item.name)
-                                    .frame(width: Dimensions.itemWidth , height: Dimensions.itemHeight)
-                                    .foregroundColor(Colors.customRed)
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            VStack {
+                Spacer()
+                VStack(spacing: Dimensions.spacing) {
+                    ForEach(viewStore.items, id: \.self) { horizontalArray in
+                        HStack {
+                            Spacer()
+                            HStack(spacing: Dimensions.spacing) {
+                                ForEach(horizontalArray) { item in
+                                    Rectangle()
+                                        .fill(viewStore.state.isSelected(item: item) ? Colors.customRed : .gray)
+                                        .frame(width: Dimensions.itemWidth , height: Dimensions.itemHeight)
+                                        .cornerRadius(Dimensions.cornerRadius)
+                                        .onTapGesture {
+                                            viewStore.send(.didTapItem(item))
+                                        }
+                                }
                             }
+                            Spacer()
                         }
-                        Spacer()
                     }
                 }
+                Spacer()
             }
-            Spacer()
         }
     }
 }
@@ -31,13 +39,16 @@ extension MemoryBoard {
         static let itemHeight: CGFloat = 100.0
         static let itemWidth: CGFloat = 100.0
         static let spacing: CGFloat = 20.0
-
+        static let cornerRadius: CGFloat = 10.0
     }
 }
 
 
 #Preview {
-    MemoryBoard()
+    let store = Store(initialState: MemoryFeature.State(items: Item.mocks)) {
+        MemoryFeature()
+      }
+    return MemoryBoard(store: store)
 }
 
 /// Create a board of 6 rectnagles
